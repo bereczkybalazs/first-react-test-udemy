@@ -3,8 +3,10 @@ import React from 'react'
 const userOutput = (props) => {
   return (
     <div>
-      <p></p>
-      <p></p>
+      <p>hello</p>
+      <p>I am super</p>
     </div>
   )
 }
+
+export default userOutput
