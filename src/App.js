@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import UserOutput from './UserOutput/UserOutput'
+import UserInput from './UserInput/UserInput'
 import './App.css';
 
 class App extends Component {
 
   state = {
     userName: 'Balazs'
+  }
+
+  modifyUserName = () => {
+    this.setState({
+      userName: 'Dolf'
+    })
   }
 
   render() {
@@ -24,6 +31,7 @@ class App extends Component {
           <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
         </ol>
         <UserOutput userName={this.state.userName}/>
+        <UserInput change={this.modifyUserName}/>
         <UserOutput userName="Bereczky"/>
         <UserOutput userName="Gellert"/>
       </div>
