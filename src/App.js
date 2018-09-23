@@ -9,9 +9,9 @@ class App extends Component {
     userName: 'Balazs'
   }
 
-  modifyUserName = () => {
+  modifyUserName = event => {
     this.setState({
-      userName: 'Dolf'
+      userName: event.target.value
     })
   }
 
@@ -31,7 +31,7 @@ class App extends Component {
           <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
         </ol>
         <UserOutput userName={this.state.userName}/>
-        <UserInput change={this.modifyUserName}/>
+        <UserInput userName={this.state.userName} change={this.modifyUserName}/>
         <UserOutput userName="Bereczky"/>
         <UserOutput userName="Gellert"/>
       </div>
